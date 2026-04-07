@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Spartan",sans-serif;
+}
+
+body{
+  width:100%;
+}
+
+/* HEADER SOLO LOGO */
+#header{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px 0;
+}
+.logo{
+  width: 120px;      /* tamaño normal en PC */
+  height: auto;      /* mantiene proporción */
+}
+/* PORTADA */
+#page-header{
+  background-image: url("./img/bg1.png");
+  background-size: cover;        /* ajusta la imagen */
+  background-position: center;   /* la centra */
+  background-repeat: no-repeat;  /* evita repetición */
+  
+  width: 100%;
+  height: 80vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#page-header h2,
+#page-header p{
+  color:#fff;
+}
+
+/* PRODUCTOS */
+#product1{
+  text-align:center;
+  padding:40px 80px;
+}
+
+#product1 .pro-container{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+#product1 .pro{
+  width:23%;
+  min-width:250px;
+  padding:10px;
+  border:1px solid #1c5fd4;
+  border-radius:20px;
+  cursor:pointer;
+  position:relative;
+  transition:0.3s;
+}
+
+#product1 .pro:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+#product1 .pro img{
+  width:100%;
+  border-radius:20px;
+}
+
+#product1 .des{
+  text-align:left;
+  padding:10px 0;
+}
+
+#product1 .des span{
+  font-size:12px;
+  color:#606063;
+}
+
+#product1 .des h5{
+  font-size:14px;
+  color:#1a1a1a;
+}
+
+#product1 .star i{
+  color:rgb(243,181,25);
+  font-size:14px;
+}
+
+#product1 .des h4{
+  font-size:14px;
+  font-weight:700;
+  color:#1c5fd4;
+}
+
+/* ICONO CARRITO */
+.cart{
+  position:absolute;
+  bottom:15px;
+  right:15px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  text-align:center;
+  border-radius:50%;
+  background:#6cb4ff;
+  color:#FFFF;
+  border:1px solid #1c5fd4;
+  font-size:18px;
+}
+
+/* PAGINACION */
+#pagination{
+  text-align:center;
+  padding:20px;
+}
+
+#pagination a{
+  text-decoration:none;
+  background:#6cb4ff;
+  color:#fff;
+  padding:10px 15px;
+  border-radius:5px;
+}
+
+/* FOOTER */
+footer{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  padding:40px 80px;
+}
+
+footer .col{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:20px;
+}
+
+footer h4{
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+footer p, footer a{
+  font-size:13px;
+  color:#465b52;
+  text-decoration:none;
+  margin-bottom:8px;
+}
+
+footer a:hover{
+  color:#088178;
+}
+
+footer .copyright{
+  width:100%;
+  text-align:center;
+  margin-top:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  #product1 .pro{
+    width:45%;
+  }
+
+}
+
+@media(max-width:480px){
+
+  #product1{
+    padding:20px;
+  }
+
+  #product1 .pro{
+    width:100%;
+  }
+
+}
+@media (max-width: 768px){
+  .logo{
+    width: 90px;
+  }
+}
+
+@media (max-width: 480px){
+  .logo{
+    width: 70px;
+  }
+}
+/* TABLET */
+@media (max-width: 768px){
+  #page-header{
+    height: 40vh;
+    padding: 15px;
+  }
+
+  #page-header h2{
+    font-size: 28px;
+  }
+
+  #page-header p{
+    font-size: 14px;
+  }
+}
+
+/* CELULAR */
+@media (max-width: 480px){
+  #page-header{
+    height: 35vh;
+    background-position: top; /* mejora encuadre en móvil */
+  }
+
+  #page-header h2{
+    font-size: 22px;
+  }
+
+  #page-header p{
+    font-size: 12px;
+  }
+}
